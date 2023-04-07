@@ -39,12 +39,12 @@ def slice_cake(cake, x, y, w, h)
   cake[y..y+h-1].map { |row| row[x..x+w-1] }
 end
 
-pie = [
+cake = [
   ".0......",
   "......0.",
   "....0...",
   "..0....."
 ]
 
-result = cut(pie)
+result = cut(cake)
 result.each_with_index { |piece, index| puts "#{index + 1}) #{piece.join(", ")} , " }
